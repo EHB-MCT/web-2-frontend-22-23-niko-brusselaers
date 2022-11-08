@@ -1,0 +1,109 @@
+/********************
+****** general ******
+********************/
+
+body {
+    background-color: rgba(0, 255, 255, 0.171);
+}
+
+h1,
+a {
+    font-family: "tensentype-zhihei",
+        sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 35pt;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img.navLogo {
+    width: 10em;
+    padding-left: 2em;
+}
+
+
+/********************
+******** nav ********
+********************/
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10pt;
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(83, 77, 77, 0.658);
+    -moz-box-shadow: 0px 3px 6px 0px rgba(83, 77, 77, 0.658);
+    box-shadow: 0px 3px 6px 0px rgba(83, 77, 77, 0.658);
+
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+a.navLinks {
+    padding: .75em;
+}
+
+a.navLinks:hover {
+    text-decoration: underline;
+    color: rgb(127, 204, 255)
+}
+
+a.activeLink {
+    color: white;
+    background-color: black;
+}
+
+/*********************
+******** body ********
+*********************/
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding: 25vh;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 300;
+    color: #B7B7B7;
+    text-align: center;
+}
+
+button {
+    margin: 3em 1em;
+    padding: 1em 1.5em;
+    border-radius: 25pt;
+    color: #B7B7B7;
+    border: none;
+    background-color: white;
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(83, 77, 77, 0.658);
+    -moz-box-shadow: 0px 3px 6px 0px rgba(83, 77, 77, 0.658);
+    box-shadow: 0px 3px 6px 0px rgba(83, 77, 77, 0.658);
+}
+
+button:hover {
+    -webkit-box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.75);
+}
+
+main div {
+    display: flex;
+}
