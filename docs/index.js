@@ -1,30 +1,32 @@
-// loading in text font
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
 
-(function (d) {
-    var config = {
-            kitId: 'fpm7gav',
-            scriptTimeout: 3000,
-            async: true
-        },
-        h = d.documentElement,
-        t = setTimeout(function () {
-            h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
-        }, config.scriptTimeout),
-        tk = d.createElement("script"),
-        f = false,
-        s = d.getElementsByTagName("script")[0],
-        a;
-    h.className += " wf-loading";
-    tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
-    tk.async = true;
-    tk.onload = tk.onreadystatechange = function () {
-        a = this.readyState;
-        if (f || a && a != "complete" && a != "loaded") return;
-        f = true;
-        clearTimeout(t);
-        try {
-            Typekit.load(config)
-        } catch (e) {}
-    };
-    s.parentNode.insertBefore(tk, s)
-})(document);
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/***/ (() => {
+
+eval("\n\n//# sourceURL=webpack://web-2-frontend-22-23-niko-brusselaers/./src/index.js?");
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	var __webpack_exports__ = {};
+/******/ 	__webpack_modules__["./src/index.js"]();
+/******/ 	
+/******/ })()
+;
