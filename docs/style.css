@@ -1,3 +1,21 @@
+/**************
+*    reset   *
+*************/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/****************
+*** variables ***
+****************/
+
+:root {
+    --tensentype: "tensentype-zhihei";
+    --verdana: "Verdana, Geneva, Tahoma, sans-serif"
+}
+
 /********************
 ****** general ******
 ********************/
@@ -6,19 +24,20 @@ body {
     background-color: rgba(0, 255, 255, 0.171);
 }
 
-h1,
-a {
-    font-family: "tensentype-zhihei",
+h1 {
+    font-family: var(--tensentype),
         sans-serif;
     font-weight: 700;
     font-style: normal;
-}
-
-h1 {
-    font-size: 35pt;
+    font-size: 55pt;
+    margin-bottom: 1em;
 }
 
 a {
+    font: var(--tensentype);
+    font-weight: 700;
+    font-size: 20pt;
+    font-style: normal;
     text-decoration: none;
     color: black;
 }
@@ -26,6 +45,33 @@ a {
 img.navLogo {
     width: 10em;
     padding-left: 2em;
+}
+
+p {
+    font-family: var(--verdana);
+    font-weight: 300;
+    color: #B7B7B7;
+    text-align: center;
+    font-size: 20pt;
+}
+
+button {
+    font-size: 20pt;
+    margin: 2em 1em;
+    padding: 1em 1.5em;
+    border-radius: 70pt;
+    color: #B7B7B7;
+    border: none;
+    background-color: white;
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(83, 77, 77, 0.658);
+    -moz-box-shadow: 0px 3px 6px 0px rgba(83, 77, 77, 0.658);
+    box-shadow: 0px 3px 6px 0px rgba(83, 77, 77, 0.658);
+}
+
+button:hover {
+    -webkit-box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.75);
 }
 
 
@@ -39,6 +85,7 @@ nav {
     justify-content: space-between;
     background-color: white;
     border-radius: 10pt;
+    margin: 1em;
     -webkit-box-shadow: 0px 3px 6px 0px rgba(83, 77, 77, 0.658);
     -moz-box-shadow: 0px 3px 6px 0px rgba(83, 77, 77, 0.658);
     box-shadow: 0px 3px 6px 0px rgba(83, 77, 77, 0.658);
@@ -66,9 +113,9 @@ a.activeLink {
     background-color: black;
 }
 
-/*********************
-******** body ********
-*********************/
+/*************************
+******** mainpage ********
+*************************/
 
 main.mainPage {
     display: flex;
@@ -79,33 +126,12 @@ main.mainPage {
     padding: 25vh;
 }
 
-p {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 300;
-    color: #B7B7B7;
-    text-align: center;
-}
-
-button {
-    margin: 3em 1em;
-    padding: 1em 1.5em;
-    border-radius: 25pt;
-    color: #B7B7B7;
-    border: none;
-    background-color: white;
-    -webkit-box-shadow: 0px 3px 6px 0px rgba(83, 77, 77, 0.658);
-    -moz-box-shadow: 0px 3px 6px 0px rgba(83, 77, 77, 0.658);
-    box-shadow: 0px 3px 6px 0px rgba(83, 77, 77, 0.658);
-}
-
-button:hover {
-    -webkit-box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.75);
-}
-
 main.mainPage div {
     display: flex;
+}
+
+.mainPage button {
+    margin-top: 3em;
 }
 
 /**********************************
@@ -113,17 +139,17 @@ main.mainPage div {
 **********************************/
 
 img.closePage {
-    width: 5em;
+    width: 1.5em;
     padding: 1em;
     background-color: white;
     border-radius: 10pt;
     border: rgba(83, 77, 77, 0.658) solid;
-    margin: 2vh 0 0 90vw;
+    margin: 3vh 0 0 90vw;
 }
 
 div.createAccountForm,
 div.signInForm {
-    padding: 20vh 0 0 15vw;
+    padding: 15vh 0 0 15vw;
     display: flex;
     flex-direction: column;
 
@@ -140,8 +166,9 @@ form {
 input[type=text],
 input[type=email],
 input[type=password] {
+    font-size: 20pt;
     border-style: none none solid none;
-    margin: 1em 0em;
+    margin: .5em 0em;
     padding: .5em;
 }
 
@@ -149,12 +176,125 @@ form div {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 19em;
+    width: 33em;
+}
+
+input[type=checkbox] {
+    margin-right: .5em;
 }
 
 div.rememberCheckbox {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    width: 50%;
+    width: 40%;
 }
+
+/****************************
+******** profile nav ********
+****************************/
+
+main.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+    padding: 10vh;
+}
+
+div.profileLinks {
+    display: flex;
+    justify-self: flex-start;
+    align-self: flex-start;
+    margin-bottom: 5em;
+    border: black solid 3px;
+    border-radius: 60pt;
+}
+
+main.profile a {
+    padding: 1em 2em;
+
+}
+
+main.profile div a:first-of-type {
+    background-color: black;
+    color: azure;
+    border-radius: 60pt 0pt 0pt 60pt;
+}
+
+main.profile div a:last-of-type {
+    border-radius: 0pt 60pt 60pt 0pt;
+}
+
+section {
+    display: none;
+    background-color: white;
+    width: 100vw;
+}
+
+section:target {
+    display: block;
+}
+
+/****************************
+******** My profile *********
+****************************/
+main.profile h1 {
+    padding: 1em 0 0 1em;
+}
+
+div.inputField {
+    display: flex;
+    align-items: center;
+    margin: -4em 0em 0em 10vw
+}
+
+div.inputField:first-of-type {
+    margin: 2em 0em 0em 10vw;
+}
+
+div.inputField:last-of-type {
+    margin: -4em 0em 6em 10vw;
+}
+
+
+div.inputField div {
+    display: flex;
+    width: 40em;
+    border-radius: 15pt;
+    -webkit-box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.75);
+}
+
+div.inputField p {
+    font: --tensentype;
+    font-weight: 400;
+    font-size: 20pt;
+    background-color: #B7B7B7;
+    padding: .6em;
+    margin: 0;
+    border-radius: 15pt 0 0 15pt;
+    width: 20%;
+    color: black;
+
+}
+
+div.inputField input {
+    margin: 0;
+    border-radius: 0 15pt 15pt 0;
+    width: 80%;
+}
+
+div.inputField button {
+    border-radius: 15pt;
+    padding: .5em 2em;
+    color: black;
+    background-color: #B7B7B7;
+
+}
+
+/******************************
+******** My favorites *********
+******************************/
