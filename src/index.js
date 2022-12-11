@@ -31,10 +31,9 @@ findRandomBtn.addEventListener("click", (event) => {
 
 const displayGame = (gameData) => {
     let innerHTML = `
-            <h1> random game </h1> 
+            <h1> Random Game </h1> 
             <p> We have selected a random game for you. <br>
-                Not happy ? <br>
-                you can re - roll by clicking retry </p>
+                 </p>
             <div class = "gameCard"id = "gameCard">
                 <img src = "${gameData.image}"alt = "">
                 <div>
@@ -44,10 +43,6 @@ const displayGame = (gameData) => {
                     <h4 class = "gameId" id = "gameId"> ${gameData.gameId} </h4> 
                 </div> 
             </div> 
-            <button id = "retryBtn">
-                <p> retry </p>
-                <span class="icon-loop2"></span>
-            </button> 
         `
     document.getElementById('mainPageContainer').innerHTML = innerHTML
 }

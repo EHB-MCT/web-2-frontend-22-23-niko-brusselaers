@@ -72,8 +72,9 @@ body {
 h1 {
     font-weight: 700;
     font-style: normal;
-    font-size: 55pt;
-    margin-bottom: 1em;
+    font-size: 45pt;
+    margin-bottom: .25em;
+    padding-top: 2em;
 }
 
 a {
@@ -81,7 +82,7 @@ a {
         sans-serif;
 
     font-weight: 700;
-    font-size: 20pt;
+    font-size: 15pt;
     font-style: normal;
     text-decoration: none;
     color: black;
@@ -169,7 +170,7 @@ main.mainPage {
     justify-content: center;
     align-content: center;
     padding: 10vh;
-    height: 70vh;
+    height: 60vh;
 }
 
 main.mainPage div {
@@ -360,11 +361,11 @@ div.gameCard {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 22em;
-    height: 28em;
+    width: 40vh;
+    height: 40vh;
     overflow: hidden;
     border-radius: 2em;
-    margin: 2em;
+    margin: 2em 0em 1em;
 }
 
 div.gameCard img {
@@ -383,6 +384,7 @@ div.gameCard div {
     height: 20%;
     justify-content: center;
     align-items: center;
+    justify-content: space-between;
 }
 
 .gameId {
@@ -395,16 +397,10 @@ div.gameCard div h3 {
 
 #dislikeBtn,
 #likeBtn {
+
     padding: .5em;
     margin: 0em 1em;
-}
-
-#retryBtn {
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 6.5em;
+    text-align: center;
+    width: 2em;
     height: 2em;
-    margin: .25em;
 }
