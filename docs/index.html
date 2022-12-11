@@ -8,7 +8,7 @@
     <link rel="icon" href="./images/logo.png">
     <title>Game Select - Main menu</title>
     <script src="./customFont.js" defer></script>
-
+    <script src="../src/index.js" defer></script>
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -25,16 +25,18 @@
             </div>
         </nav>
 
-        <main class="mainPage">
-            <h1>Find a game to play</h1>
-            <p>
-                Find a new game to play completely random or <br>
-                based on your preferences.
-            </p>
+        <main class="mainPage" id="body">
+            <div id="mainPageContainer">
+                <h1>Find a game to play</h1>
+                <p>
+                    Find a new game to play completely random or <br>
+                    based on your preferences.
+                </p>
+            </div>
             <div>
-                <button>Find on preference</button>
-                <button>Find random game</button>
-                <button>Find random game from favorites</button>
+                <button id="findOnPreferenceBtn">Find on preference</button>
+                <button id="findRandomBtn">Find random game</button>
+                <button id="findFromFavoritesBtn">Find random game from favorites</button>
             </div>
         </main>
     </head>

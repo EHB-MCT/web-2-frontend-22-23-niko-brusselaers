@@ -5,6 +5,7 @@
 * {
     margin: 0;
     padding: 0;
+
 }
 
 /****************
@@ -20,13 +21,55 @@
 ****** general ******
 ********************/
 
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?q3gl9h');
+    src: url('fonts/icomoon.eot?q3gl9h#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?q3gl9h') format('truetype'),
+        url('fonts/icomoon.woff?q3gl9h') format('woff'),
+        url('fonts/icomoon.svg?q3gl9h#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-thumbs-down:before {
+    content: "\e900";
+}
+
+.icon-heart:before {
+    content: "\e9da";
+}
+
+.icon-loop2:before {
+    content: "\ea2e";
+}
+
+
+
 body {
     background-color: rgba(0, 255, 255, 0.171);
+    font-family: var(--tensentype),
+        sans-serif;
+
 }
 
 h1 {
-    font-family: var(--tensentype),
-        sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 55pt;
@@ -34,7 +77,9 @@ h1 {
 }
 
 a {
-    font: var(--tensentype);
+    font-family: var(--tensentype),
+        sans-serif;
+
     font-weight: 700;
     font-size: 20pt;
     font-style: normal;
@@ -48,7 +93,7 @@ img.navLogo {
 }
 
 p {
-    font-family: var(--verdana);
+
     font-weight: 300;
     color: #B7B7B7;
     text-align: center;
@@ -123,7 +168,8 @@ main.mainPage {
     align-items: center;
     justify-content: center;
     align-content: center;
-    padding: 25vh;
+    padding: 10vh;
+    height: 70vh;
 }
 
 main.mainPage div {
@@ -132,6 +178,12 @@ main.mainPage div {
 
 .mainPage button {
     margin-top: 3em;
+}
+
+#mainPageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /**********************************
@@ -298,3 +350,61 @@ div.inputField button {
 /******************************
 ******** My favorites *********
 ******************************/
+
+/******************************
+******** displayGame *********
+******************************/
+
+div.gameCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 22em;
+    height: 28em;
+    overflow: hidden;
+    border-radius: 2em;
+    margin: 2em;
+}
+
+div.gameCard img {
+    height: 80%;
+    margin: 0%;
+
+
+}
+
+div.gameCard div {
+
+    display: flex;
+    padding: 1em;
+    background-color: white;
+    width: 100%;
+    height: 20%;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameId {
+    display: none;
+}
+
+div.gameCard div h3 {
+    text-align: center;
+}
+
+#dislikeBtn,
+#likeBtn {
+    padding: .5em;
+    margin: 0em 1em;
+}
+
+#retryBtn {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 6.5em;
+    height: 2em;
+    margin: .25em;
+}
