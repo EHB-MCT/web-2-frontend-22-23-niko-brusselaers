@@ -8,6 +8,7 @@
     <link rel="icon" href="./images/logo.png">
     <title>Game Select - Create Account</title>
     <script src="./customFont.js" defer></script>
+    <script src="./createAccount.js" defer></script>
 
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -20,14 +21,16 @@
         <main class="CreateAccount">
             <a href="./index.html"><img src="./images/close-icon.png" alt="" class="closePage"></a>
             <div class="createAccountForm">
-                <form action="">
+                <form action="" id="createAccountForm">
                     <h1>Create account</h1>
-                    <input type="text" name="userName" id="userName" placeholder="Username">
+                    <input type="text" name="username" id="username" placeholder="Username">
+                    <input type="text" name="firstname" id="firstname" placeholder="Firstname">
+                    <input type="text" name="lastname" id="lastname" placeholder="Lastname">
                     <input type="email" name="email" id="email" placeholder="Email">
                     <input type="password" name="password" id="password" placeholder="Password">
                     <input type="password" name="repeatPassword" id="repeatPassword" placeholder="Repeat password">
 
-                    
+
                     <button type="submit">Sign in</button>
                     <div>
                         <p>Already have an account?</p> <a href="./SignIn.html">Sign in</a>

@@ -43,6 +43,11 @@ const displayGame = (gameData) => {
                     <h4 class = "gameId" id = "gameId"> ${gameData.gameId} </h4> 
                 </div> 
             </div> 
+            <div>
+                <button id = "findOnPreferenceBtn"> Find on preference </button>
+                <button id = "findRandomBtn"> Find random game </button>
+                <button id = "findFromFavoritesBtn" > Find random game from favorites </button> 
+            </div>
         `
-    document.getElementById('mainPageContainer').innerHTML = innerHTML
+    document.getElementById('body').innerHTML = innerHTML
 }
