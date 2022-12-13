@@ -19,7 +19,9 @@ createAccountForm.addEventListener("submit", (event) => {
         firstname: document.getElementById('firstname').value,
         lastname: document.getElementById('lastname').value
     }
-    const repeatPassword = document.getElementById('repeatPassword')
+    let repeatPassword = document.getElementById('repeatPassword').value
+    console.log(repeatPassword);
+    console.log(newUser);
     if (newUser.password == repeatPassword) {
         try {
             let statusCode
@@ -28,15 +30,17 @@ createAccountForm.addEventListener("submit", (event) => {
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify(newUser)
+                    body: JSON.stringify({
+                        newUser
+                    })
                 }).then(response => {
                     statusCode = response.status
-                    response.json()
-                })
+                    return response.json()})
                 .then(data => {
                     console.log(data);
                     if (statusCode == 200) {
-                        window.location.replace("signIn.html");
+                        window.location.replace("signIn.html")
+                        
                     }
                 })
         } catch (error) {

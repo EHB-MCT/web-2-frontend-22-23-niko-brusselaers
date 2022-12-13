@@ -8,6 +8,7 @@
     <link rel="icon" href="./images/logo.png">
     <title>Game Select - Sign in</title>
     <script src="./customFont.js" defer></script>
+    <script src="./login.js" defer></script>
 
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -15,24 +16,26 @@
 <body>
 
     <head>
-        
+
 
         <main class="signIn">
             <a href="./index.html"><img src="./images/close-icon.png" alt="" class="closePage"></a>
             <div class="signInForm">
-                <form action="" id="sigInForm">
+                <form action="" id="signInForm">
                     <h1>Sign in</h1>
-                    <input type="text" name="userName" id="userName" placeholder="Username">
+                    <input type="text" name="username" id="username" placeholder="Username">
                     <input type="password" name="password" id="password" placeholder="Password">
                     <div>
                         <div class="rememberCheckbox">
-                        <input type="checkbox" name="saveLogin" id="saveLogin">
-                        <label for="saveLogin">Remember me</label>
+                            <input type="checkbox" name="saveLogin" id="saveLogin">
+                            <label for="saveLogin">Remember me</label>
                         </div>
                         <a href="./forgotPassword.html">Forgot password?</a>
                     </div>
                     <button type="submit">Sign in</button>
-                    <div><p>Don't have an account?</p> <a href="./createAccount.html">Create account</a></div>
+                    <div>
+                        <p>Don't have an account?</p> <a href="./createAccount.html">Create account</a>
+                    </div>
                 </form>
             </div>
         </main>
