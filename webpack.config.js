@@ -8,7 +8,8 @@ module.exports = {
 
     entry: {
         index: './src/index.js',
-        login: './src/signIn.js',
+        login: './src/login.js',
+        loginId: './src/loginId.js',
         createAccount: './src/createAccount.js',
         customFont: './src/customFont.js'
 

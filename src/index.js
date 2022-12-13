@@ -2,17 +2,23 @@
  * 
  *      used sources:
  * 
- *              -enable cors: https: //developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin
- *              -css: https: //www.w3schools.com/css/default.asp
+ *              - WEB II frontend niko brusselaers: https: //github.com/EHB-MCT/web2-frontend-niko-brusselaers
+ *              - enable cors: https: //developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin
+ *              - css: https: //www.w3schools.com/css/default.asp
+ *              - exporting function: https: //developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export
+ *              - how to use localstorage: https: //developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+ *              - how to use sessionstorage: https: //developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
+ * 
+ * 
  */
-
 
 const findOnPreferenceBtn = document.getElementById("findOnPreferenceBtn")
 const findRandomBtn = document.getElementById("findRandomBtn")
 const findFromFavoritesBtn = document.getElementById("findFromFavoritesBtn")
-
-
 const url = 'https://gamepickr-backend.onrender.com'
+
+
+//if user clicks find random game button, function will perform a fetch call to backend to receive data about a random game
 findRandomBtn.addEventListener("click", (event) => {
     event.preventDefault()
     console.log('click');
@@ -25,6 +31,7 @@ findRandomBtn.addEventListener("click", (event) => {
         .then(response => response.json())
         .then(data => {
             console.log(data);
+            //when data about game has been received update main page to display the randomly selected game
             displayGame(data)
         })
 })

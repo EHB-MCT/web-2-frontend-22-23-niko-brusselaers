@@ -1,17 +1,10 @@
-/**
- * createAccountForm
- * userName
- * email
- * password
- * repeatPassword
- */
-
 const createAccountForm = document.getElementById('createAccountForm')
 const url = 'http://localhost:3000'
 
 
 createAccountForm.addEventListener("submit", (event) => {
     event.preventDefault()
+    //get all input data from form
     const newUser = {
         username: document.getElementById('username').value,
         email: document.getElementById('email').value,
@@ -20,8 +13,7 @@ createAccountForm.addEventListener("submit", (event) => {
         lastname: document.getElementById('lastname').value
     }
     let repeatPassword = document.getElementById('repeatPassword').value
-    console.log(repeatPassword);
-    console.log(newUser);
+    // if both password input value are the same, perform a fetch call to backend to create a new account
     if (newUser.password == repeatPassword) {
         try {
             let statusCode
@@ -35,12 +27,13 @@ createAccountForm.addEventListener("submit", (event) => {
                     })
                 }).then(response => {
                     statusCode = response.status
-                    return response.json()})
+                    return response.json()
+                })
                 .then(data => {
-                    console.log(data);
+                    //if fetch call is succesful and we receive statuscode 200, redirect to login page
                     if (statusCode == 200) {
-                        window.location.replace("signIn.html")
-                        
+                        window.location.replace("login.html")
+
                     }
                 })
         } catch (error) {
