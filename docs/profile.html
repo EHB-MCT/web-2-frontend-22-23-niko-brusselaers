@@ -8,6 +8,10 @@
     <link rel="icon" href="./images/logo.png">
     <title>Game Select - Main menu</title>
     <script src="./customFont.js" defer></script>
+    <script src="./loginId.js" defer></script>
+    <script src="./navigation.js" defer></script>
+
+
 
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -15,14 +19,8 @@
 <body>
 
     <head>
-        <nav>
-            <a href="./index.html"><img class="navLogo" src="./images/logo.png" alt="logo image Game Select"></a>
-            <div>
-                <a href="./index.html" class="navLinks activeLink">Main</a>
-                <a href="./profile.html#myProfile" class="navLinks">Profile</a>
-                <a href="#" class="navLinks">Log out</a>
-                <a href="./SignIn.html" class="navLinks">Sign In</a>
-            </div>
+        <nav id="header">
+
         </nav>
 
         <main class="profile">
@@ -33,28 +31,36 @@
             <section id="myProfile">
                 <h1>Personal information</h1>
                 <div class="inputField">
-                    <div><p>Username</p> <input type="text" name="username" id="username"
-                            placeholder="your username" disabled> </div><button>edit</button>
+                    <div>
+                        <p>Username</p> <input type="text" name="username" id="username" placeholder="your username"
+                            disabled>
+                    </div><button>edit</button>
                 </div>
                 <div class="inputField">
-                    <div><p >First name</p> <input type="text" name="firstName" id="firstName"
-                            placeholder="your first name" disabled> </div><button>edit</button>
+                    <div>
+                        <p>First name</p> <input type="text" name="firstName" id="firstName"
+                            placeholder="your first name" disabled>
+                    </div><button>edit</button>
                 </div>
                 <div class="inputField">
-                    <div><p >Last name</p> <input type="email" name="lastName" id="lastName"
-                            placeholder="your last name" disabled> </div><button>edit</button>
+                    <div>
+                        <p>Last name</p> <input type="email" name="lastName" id="lastName" placeholder="your last name"
+                            disabled>
+                    </div><button>edit</button>
                 </div>
 
                 <div class="inputField">
-                    <div><p >Email</p> <input type="text" name="email" id="email"
-                            placeholder="your email@email.com" disabled> </div><button>edit</button>
+                    <div>
+                        <p>Email</p> <input type="text" name="email" id="email" placeholder="your email@email.com"
+                            disabled>
+                    </div><button>edit</button>
                 </div>
 
-    
 
-                
 
-                
+
+
+
             </section>
             <section id="myFavorites">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste tenetur, temporibus deserunt, eum

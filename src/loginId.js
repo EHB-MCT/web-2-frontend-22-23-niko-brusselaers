@@ -1,12 +1,13 @@
-const url = 'http://localhost:3000'
+const url = 'https://gamepickr-backend.onrender.com'
 
-loginWithId = () => {
+
+loginWithId = async () => {
     //retrieve user credential either from sessionStorage or localStorage, if both ar empty return null
     let userId = sessionStorage.getItem('id') || localStorage.getItem('id') || null
     let username = sessionStorage.getItem('username') || localStorage.getItem('username') || null
     // if userId and username are not null, do a fetch request to check if userId and username are valid
     if (userId != null && !username != null) {
-        fetch(`${url}/loginId`, {
+        await fetch(`${url}/loginId`, {
                     method: "POST",
                     headers: {
                         'Content-Type': 'application/json',

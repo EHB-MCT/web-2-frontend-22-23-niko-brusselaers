@@ -10,6 +10,7 @@ module.exports = {
         index: './src/index.js',
         login: './src/login.js',
         loginId: './src/loginId.js',
+        navigation: './src/navigation.js',
         createAccount: './src/createAccount.js',
         customFont: './src/customFont.js'
 
