@@ -12,6 +12,7 @@ module.exports = {
         loginId: './src/loginId.js',
         navigation: './src/navigation.js',
         createAccount: './src/createAccount.js',
+        profile: './src/profile.js',
         customFont: './src/customFont.js'
 
     },

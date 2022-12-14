@@ -207,7 +207,7 @@ div.signInForm {
 
 }
 
-div.signInForm{
+div.signInForm {
     padding-top: 15vh;
 }
 
@@ -264,7 +264,7 @@ div.profileLinks {
     justify-self: flex-start;
     align-self: flex-start;
     margin-bottom: 5em;
-    border: black solid 3px;
+    border: black solid 4px;
     border-radius: 60pt;
 }
 
@@ -300,10 +300,16 @@ main.profile h1 {
     padding: 1em 0 0 1em;
 }
 
+#myProfile div,
+#myProfile button {
+    height: 4rem;
+
+}
+
 div.inputField {
     display: flex;
     align-items: center;
-    margin: -4em 0em 0em 10vw
+    margin: 4rem 0em 0em 10vw;
 }
 
 div.inputField:first-of-type {
@@ -311,13 +317,15 @@ div.inputField:first-of-type {
 }
 
 div.inputField:last-of-type {
-    margin: -4em 0em 6em 10vw;
+    margin: 4rem 0em 6em 10vw;
 }
 
 
 div.inputField div {
     display: flex;
-    width: 40em;
+    align-items: center;
+    width: 50vw;
+    height: 4rem;
     border-radius: 15pt;
     -webkit-box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.75);
@@ -325,22 +333,25 @@ div.inputField div {
 }
 
 div.inputField p {
-    font: --tensentype;
+    font: var(--tensentype);
     font-weight: 400;
     font-size: 20pt;
     background-color: #B7B7B7;
     padding: .6em;
     margin: 0;
+    height: 2rem;
     border-radius: 15pt 0 0 15pt;
-    width: 20%;
+    width: 25vw;
     color: black;
+    text-align: center;
 
 }
 
 div.inputField input {
     margin: 0;
     border-radius: 0 15pt 15pt 0;
-    width: 80%;
+    width: 60vw;
+    height: 3rem;
 }
 
 div.inputField button {
@@ -409,3 +420,7 @@ div.gameCard div h3 {
     width: 2em;
     height: 2em;
 }
+
+/**********************************
+******** displayQuestions *********
+**********************************/

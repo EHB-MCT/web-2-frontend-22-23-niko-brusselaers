@@ -26,8 +26,8 @@ function displayNav(isLoggedIn) {
         innerHTML = `
             <a href="./index.html"> <img class="navLogo" src="./images/logo.png" alt="logo image Game Select"> </a>
         <div>
-            <a href = "./index.html" class = "navLinks activeLink"> Main </a>
-            <a href = "./profile.html" class = "navLinks"> Profile </a> 
+            <a href = "./index.html" class="navLinks" id='index'> Main </a>
+            <a href = "./profile.html#myProfile" class = "navLinks" id='profile'> Profile </a> 
             <a href = "#" class = "navLinks" id="logout"> Log out </a>
         </div>
         `
@@ -37,8 +37,8 @@ function displayNav(isLoggedIn) {
             <a href="./index.html"> <img class="navLogo" src="./images/logo.png" alt="logo image Game Select" > </a>
 
         <div>
-            <a href = "./index.html" class = "navLinks activeLink"> Main </a>
-            <a href = "./login.html" class = "navLinks" > Sign In </a> 
+            <a href = "./index.html" class="navLinks" id='index' >  Main </a>
+            <a href = "./login.html" class="navLinks" id='profile'> Sign In </a> 
         </div>
         `
     }

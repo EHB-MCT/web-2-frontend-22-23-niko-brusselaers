@@ -8,13 +8,15 @@
  *              - exporting function: https: //developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export
  *              - how to use localstorage: https: //developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
  *              - how to use sessionstorage: https: //developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
+ *              - how to add a class to an element javascript: https: //www.w3schools.com/howto/howto_js_add_class.asp
+ *              - how to change input placeholder text https: //stackoverflow.com/questions/13506481/change-placeholder-text
  * 
  * 
  */
 
 const isLoggedIn = sessionStorage.getItem('isLoggedIn')
 const url = 'https://gamepickr-backend.onrender.com'
-
+document.getElementById('index').classList.add("activeLink")
 
 //if user is logged in or not, display a series of buttons for selecting a random game
 displayMainpageButtons(isLoggedIn)
@@ -91,4 +93,8 @@ function displayMainpageButtons(isLoggedIn) {
     }
     //insert buttons into html element
     mainPageBtnContainer.innerHTML = innerHTML
+}
+
+function displayQuuestions() {
+
 }
