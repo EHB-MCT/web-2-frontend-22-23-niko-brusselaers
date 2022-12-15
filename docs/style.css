@@ -63,9 +63,10 @@
 
 
 body {
-    background-color: rgba(0, 255, 255, 0.171);
+    background-color: #32C6F4;
     font-family: var(--tensentype),
         sans-serif;
+    overflow-x: hidden;
 
 }
 
@@ -256,7 +257,7 @@ main.profile {
     align-items: center;
     justify-content: space-around;
     align-content: center;
-    padding: 10vh;
+    padding: 6vh;
 }
 
 div.profileLinks {
@@ -285,7 +286,6 @@ main.profile div a:last-of-type {
 
 section {
     display: none;
-    background-color: white;
     width: 100vw;
 }
 
@@ -296,6 +296,8 @@ section:target {
 /****************************
 ******** My profile *********
 ****************************/
+
+
 main.profile h1 {
     padding: 1em 0 0 1em;
 }
@@ -320,6 +322,22 @@ div.inputField:last-of-type {
     margin: 4rem 0em 6em 10vw;
 }
 
+#myProfile,
+.myFavorites {
+    background-color: white;
+    width: 100vw;
+}
+
+.myDislikes {
+    background-color: gray;
+}
+
+section:target#myFavorites {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
 
 div.inputField div {
     display: flex;
@@ -365,6 +383,53 @@ div.inputField button {
 /******************************
 ******** My favorites *********
 ******************************/
+div.myFavorites,
+div.myDislikes {
+    display: flex;
+    width: 80vw;
+    padding: 5vh 10vw 5vh;
+    flex-direction: column;
+    overflow: scroll;
+
+}
+
+#myFavorites h1,
+#myDislikes h1 {
+    padding-bottom: 0rem;
+}
+
+#deleteGameBtn {
+    position: absolute;
+    transform: translate(7rem, -10rem);
+    width: 3rem;
+    height: 3rem;
+    color: black;
+    font-weight: bolder;
+    font-size: 15pt;
+    padding: 0;
+
+}
+
+div.gameCardContainer {
+    display: flex;
+    width: 70vw;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
+div.gameCardContainer div.gameCard {
+    width: 20rem;
+    height: 25rem;
+    margin: 0 3rem;
+}
+
+div.myFavorites div.gameCard div,
+div.myDislikes div.gameCard div {
+    justify-content: center;
+}
 
 /******************************
 ******** displayGame *********
@@ -375,10 +440,11 @@ div.gameCard {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 40vh;
-    height: 40vh;
+    width: 28rem;
+    height: 32rem;
     overflow: hidden;
     border-radius: 2em;
+    border: 2px solid gray;
     margin: 2em 0em 1em;
 }
 

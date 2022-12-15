@@ -15,6 +15,7 @@
  */
 
 const isLoggedIn = sessionStorage.getItem('isLoggedIn')
+console.log(isLoggedIn);
 const url = 'https://gamepickr-backend.onrender.com'
 document.getElementById('index').classList.add("activeLink")
 

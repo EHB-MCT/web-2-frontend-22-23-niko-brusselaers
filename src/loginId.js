@@ -22,7 +22,8 @@ loginWithId = async () => {
 
             )
             .then(response => response.json())
-            .then(data => {
+            .then(async data => {
+                console.log(data);
                 // if credentials are valid, create a new variable in sessionStorage and set it to true
                 if (data.isValid) {
                     sessionStorage.setItem("isLoggedIn", true);

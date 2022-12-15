@@ -20,7 +20,7 @@ if (isLoggedIn == "true") {
             fetch(`${url}/login`, {
                     method: "POST",
                     headers: {
-                        'Content-Type': 'application/json',
+                        'Content-Type': 'application/json', 
                     },
                     body: JSON.stringify({
                         loginCredentials
@@ -31,6 +31,7 @@ if (isLoggedIn == "true") {
                 })
                 .then(data => {
                     if (statusCode == 200) {
+                        sessionStorage.setItem("isLoggedIn", true);
                         // if user credentials are valid and we receive statuscode 200,
                         if (document.getElementById('saveLogin').checked) {
                             // save data in localStorage if remember me has been checked
