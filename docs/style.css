@@ -440,8 +440,8 @@ div.gameCard {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 28rem;
-    height: 32rem;
+    width: 26rem;
+    height: 26rem;
     overflow: hidden;
     border-radius: 2em;
     border: 2px solid gray;

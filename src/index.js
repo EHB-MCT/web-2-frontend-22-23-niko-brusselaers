@@ -48,7 +48,24 @@ if (isLoggedIn == "true") {
     const findFromFavoritesBtn = document.getElementById("findFromFavoritesBtn")
     // if user clicks on findFromFavoritesBtn, perform a fetch call to get a random game from user favourites
     findFromFavoritesBtn.addEventListener('click', () => {
+        let userId = sessionStorage.getItem('id') || localStorage.getItem('id')
+        console.log(userId);
+        fetch(`${url}/getGameFromFavorites`, {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    userId
+                })
 
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                //when data about game has been received update main page to display the randomly selected game
+                displayGame(data)
+            })
     })
 
 }
