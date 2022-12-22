@@ -8,8 +8,10 @@ const displayGame = (gameData, URL) => {
             <p> We have selected a random game for you. <br>
                  </p>
             <div class="gameCard" id="gameCard">
-                <img src="${gameData.image}" alt="">
-                <div>
+                <div class='imageContainer'>
+                    <img src="${gameData.image}" alt="">
+                </div>
+                <div class='gameDetails'>
                     <button id="dislikeBtn"> <span class="icon-thumbs-down" id="dislikeBtn"> </span></button>
                     <h3>${gameData.name}</h3> 
                     <button id="likeBtn" > <span class = "icon-heart" id="likeBtn"> </button>

@@ -44,8 +44,6 @@ if (isLoggedIn == "true") {
                 console.log(error.message);
             }
 
-        } else {
-            console.log("passwords do not match");
         }
     })
 }

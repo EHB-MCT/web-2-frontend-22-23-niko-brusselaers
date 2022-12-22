@@ -60,6 +60,18 @@
     content: "\ea2e";
 }
 
+::-webkit-scrollbar {
+    width: .5rem;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(77, 76, 76, 0.697);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #32C6F4;
+}
+
 
 
 body {
@@ -461,26 +473,27 @@ div.myDislikes {
 
 #deleteGameBtn {
     position: absolute;
-    transform: translate(7rem, -10rem);
-    width: 3rem;
-    height: 3rem;
-    color: black;
-    font-weight: bolder;
-    font-size: 15pt;
-    padding: 0;
-
+    z-index: 1;
+    width: 3.25rem;
+    height: 3.25rem;
+    right: 1rem;
 }
+
 
 div.gameCardContainer {
     display: flex;
-    width: 70vw;
-    overflow: hidden;
+    overflow: auto;
     flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
 }
 
 div.gameCardContainer div.gameCard {
     width: 20rem;
     height: 25rem;
+    min-width: 20rem;
+    min-height: 25rem;
     margin: 0 3rem;
 }
 
@@ -498,7 +511,7 @@ div.gameCard {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 26rem;
+    width: 22rem;
     height: 26rem;
     overflow: hidden;
     border-radius: 2em;
@@ -506,13 +519,21 @@ div.gameCard {
     margin: 2em 0em 1em;
 }
 
-div.gameCard img {
+div.imageContainer {
+    position: relative;
     height: 80%;
-    width: fit-content;
-    margin: 0%;
+}
 
+div.imageContainer img {
+    width: 100%;
+    height: 400%;
+    transform: translateY(7.5rem);
+}
 
-
+div.imageContainer img.imgGame {
+    width: 100%;
+    height: 400%;
+    transform: translateY(7.0rem);
 }
 
 div.gameCard div {
@@ -525,6 +546,11 @@ div.gameCard div {
     justify-content: center;
     align-items: center;
     justify-content: space-between;
+}
+
+div.gameDetails {
+    margin-top: 12.1rem;
+
 }
 
 .gameId {
@@ -545,7 +571,7 @@ button#likeBtn {
     height: 2em;
 }
 
-p.gameContainerText{
+p.gameContainerText {
     color: black;
     font-weight: bold;
     font-size: 15pt;

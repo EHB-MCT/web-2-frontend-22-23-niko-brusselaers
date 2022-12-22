@@ -1,5 +1,5 @@
 const getRandomGame = async (URL) => {
-    //get a random game from api
+    //doing a fetch call to get random game from api
     return await fetch(`${URL}/getRandomGame`, {
             method: "GET",
             headers: {

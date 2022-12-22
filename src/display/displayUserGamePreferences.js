@@ -6,11 +6,12 @@ const displayUserGamePreferences = (games) => {
         if (games[i].isLiked == true) {
             likedGamesInnerHTML += `
                         <div class="gameCard " id="gameCard">
-                            <button id="deleteGameBtn"> X</button>
+                            <div class='imageContainer'>
+                                <button id="deleteGameBtn"> X</button>
 
-                            <img src="${games[i].image}"
-                                alt="">
-                            <div>
+                                <img  src="${games[i].image}" class='imgGame'  "alt="">
+                            </div>
+                            <div class='gameDetails'>
                                 <h3>${games[i].name} </h3>
                                 <h4 class="gameId" id="gameId">${games[i].gameId} </h4>
                             </div>
@@ -18,10 +19,11 @@ const displayUserGamePreferences = (games) => {
         } else {
             dislikedGamesInnerHTML += `
                         <div class="gameCard " id="gameCard">
-                            <button id="deleteGameBtn"> X</button>
+                            <div class='imageContainer'>
+                                <button id="deleteGameBtn"> X</button>
 
-                            <img src="${games[i].image}"
-                                alt="">
+                                <img src="${games[i].image}" class='imgGame'  alt="">
+                            </div>
                             <div>
                                 <h3>${games[i].name} </h3>
                                 <h4 class="gameId" id="gameId">${games[i].gameId} </h4>

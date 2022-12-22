@@ -31,7 +31,6 @@ myProfile.addEventListener("click", (element) => {
     if (element.target != element.currentTarget) {
         const overlay = document.getElementById('overlay')
         const container = document.getElementById('updateUserContainer')
-        console.log(element.target.id);
         switch (element.target.id) {
             case "editUsername":
                 container.innerHTML = `
@@ -154,7 +153,6 @@ myProfile.addEventListener("click", (element) => {
 function updateUserCredentials(type) {
     let editCredentialsForm = document.getElementById('editCredentialsForm')
     editCredentialsForm.addEventListener('submit', (event) => {
-        console.log('click');
         event.preventDefault()
         let newUserCredentials = {
             userId: sessionStorage.getItem('id') || localStorage.getItem('id'),
@@ -187,7 +185,6 @@ function updateUserCredentials(type) {
 
         }
 
-        console.log(newUserCredentials);
 
 
     })

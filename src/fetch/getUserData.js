@@ -1,6 +1,8 @@
 const getUserData = async (URL) => {
+    // get userId and username from session or local storage
     const userId = sessionStorage.getItem('id') || localStorage.getItem('id')
     const username = sessionStorage.getItem('username') || localStorage.getItem('username')
+    //doing a fetch call to api to retrieve user credentials data
     return await fetch(`${URL}/getUserData`, {
             method: "POST",
             headers: {
