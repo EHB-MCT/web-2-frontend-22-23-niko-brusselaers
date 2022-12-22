@@ -339,6 +339,13 @@ section:target#myFavorites {
     align-items: center;
 }
 
+div.editCredentialsBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33em;
+}
+
 div.inputField div {
     display: flex;
     align-items: center;

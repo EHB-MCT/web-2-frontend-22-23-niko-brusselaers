@@ -1,24 +1,5 @@
-// retrieving isLoggedIn key from session storage
-const isLoggedIn = sessionStorage.getItem('isLoggedIn')
 //depending is the user is logged in or not, create a version of navigation
-displayNav(isLoggedIn)
-// if user is logged in, create a eventlistener for logout button 
-if (isLoggedIn == "true") {
-    const logoutbtn = document.getElementById('logout')
-    // if user presses the logout button, remove all localStorage and sessionStorage keys for loggin in
-    logoutbtn.addEventListener('click', (event) => {
-        event.preventDefault()
-        sessionStorage.setItem("isLoggedIn", false);
-        sessionStorage.removeItem('id')
-        sessionStorage.removeItem('username')
-        localStorage.removeItem('id')
-        localStorage.removeItem('username')
-        window.location.reload()
-    })
-}
-
-
-function displayNav(isLoggedIn) {
+const displayNav = (isLoggedIn) => {
     const nav = document.getElementById('header')
     let innerHTML
     //if user is logged in, show; logo, mainpage link, profile link, and logout button
@@ -31,6 +12,18 @@ function displayNav(isLoggedIn) {
             <a href = "#" class = "navLinks" id="logout"> Log out </a>
         </div>
         `
+        nav.innerHTML = innerHTML
+        const logoutbtn = document.getElementById('logout')
+        // if user presses the logout button, remove all localStorage and sessionStorage keys for loggin in
+        logoutbtn.addEventListener('click', (event) => {
+            event.preventDefault()
+            sessionStorage.setItem("isLoggedIn", false);
+            sessionStorage.removeItem('id')
+            sessionStorage.removeItem('username')
+            localStorage.removeItem('id')
+            localStorage.removeItem('username')
+            window.location.reload()
+        })
     } else {
         // if user is not logged in, show logo, mainpage link and sign-in link
         innerHTML = `
@@ -41,6 +34,9 @@ function displayNav(isLoggedIn) {
             <a href = "./login.html" class="navLinks" id='profile'> Sign In </a> 
         </div>
         `
+        nav.innerHTML = innerHTML
     }
-    nav.innerHTML = innerHTML
 }
+
+
+export default displayNav

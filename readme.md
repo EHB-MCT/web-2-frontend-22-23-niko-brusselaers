@@ -8,3 +8,6 @@
 - how to use sessionstorage: https: //developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
 - how to add a class to an element javascript: https: //www.w3schools.com/howto/howto_js_add_class.asp
 - how to change input placeholder text https: //stackoverflow.com/questions/13506481/change-placeholder-text
+- adding event listener to multipule elements: https://www.kirupa.com/html5/handling_events_for_many_elements.htm
+- repeat a charachter: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat
+- how to create an overlay: https://www.w3schools.com/howto/howto_css_overlay.asp
