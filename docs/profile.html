@@ -18,6 +18,18 @@
 </head>
 
 <body>
+    <div class="overlay" id="overlay">
+        <div class="overlayContainer">
+            <h2>please enter the following details:</h2>
+            <div id="updateUserContainer">
+
+            </div>
+            <div>
+                <button id="cancelBtn">cancel</button>
+                <button id="submitBtn">submit</button>
+            </div>
+        </div>
+    </div>
 
     <head>
         <nav id="header">
@@ -33,45 +45,45 @@
                 <h1>Personal information</h1>
                 <div class="inputField">
                     <div>
-                        <p>Username</p> <input type="text" name="username" id="username" placeholder="" disabled>
-                    </div><button>edit</button>
+                        <p>Username</p> <input type="text" name="username" id="username" placeholder="">
+                    </div><button id="editUsername">edit</button>
                 </div>
                 <div class="inputField">
                     <div>
-                        <p>First name</p> <input type="text" name="firstname" id="firstname" placeholder="" disabled>
-                    </div><button>edit</button>
+                        <p>First name</p> <input type="text" name="firstname" id="firstname" placeholder="">
+                    </div><button id="editFirstname">edit</button>
                 </div>
                 <div class="inputField">
                     <div>
-                        <p>Last name</p> <input type="text" name="lastName" id="lastname" placeholder="" disabled>
-                    </div><button>edit</button>
+                        <p>Last name</p> <input type="text" name="lastName" id="lastname" placeholder="">
+                    </div><button id="editLastname">edit</button>
                 </div>
 
                 <div class="inputField">
                     <div>
-                        <p>Email</p> <input type="email" name="email" id="email" placeholder="" disabled>
-                    </div><button>edit</button>
+                        <p>Email</p> <input type="email" name="email" id="email" placeholder="">
+                    </div><button id="editEmail">edit</button>
                 </div>
-
-
-
-
-
+                <div class="inputField">
+                    <div>
+                        <p>password</p> <input type="password" name="password" id="password" placeholder="">
+                    </div><button id="editEmail">edit</button>
+                </div>
 
             </section>
             <section id="myFavorites">
                 <div class="myFavorites">
                     <h1>My Favorites</h1>
                     <div class="gameCardContainer" id="favoriteGamesContainer">
-                
+
 
                     </div>
                 </div>
                 <div class="myDislikes">
                     <h1>My Dislikes</h1>
                     <div class="gameCardContainer" id="dislikedGamesContainer">
-                        
-                        
+
+
 
                     </div>
                 </div>

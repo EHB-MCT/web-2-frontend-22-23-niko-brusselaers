@@ -380,6 +380,61 @@ div.inputField button {
 
 }
 
+div.overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+div.overlayContainer {
+    display: flex;
+    width: 21vw;
+    height: 40vh;
+    padding: 5vh 5vw;
+    border-radius: 3rem;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around
+
+}
+
+div.overlayContainer h2{
+    font-size: 20pt;
+}
+
+
+
+div.input {
+    display: flex;
+    margin: 2rem 0 0;
+    flex-direction: column;
+
+}
+
+div.input input {
+    width: 15vw;
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(83, 77, 77, 0.658);
+    -moz-box-shadow: 0px 3px 6px 0px rgba(83, 77, 77, 0.658);
+    box-shadow: 0px 3px 6px 0px rgba(83, 77, 77, 0.658);
+}
+
+div.input label{
+    font-size: 15pt;
+}
+
+
+
 /******************************
 ******** My favorites *********
 ******************************/
@@ -477,8 +532,8 @@ div.gameCard div h3 {
     text-align: center;
 }
 
-#dislikeBtn,
-#likeBtn {
+button#dislikeBtn,
+button#likeBtn {
 
     padding: .5em;
     margin: 0em 1em;
