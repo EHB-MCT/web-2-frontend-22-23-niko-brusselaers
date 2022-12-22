@@ -450,7 +450,7 @@ div.myDislikes {
     width: 80vw;
     padding: 5vh 10vw 5vh;
     flex-direction: column;
-    overflow: scroll;
+    overflow: auto;
 
 }
 
@@ -476,9 +476,6 @@ div.gameCardContainer {
     width: 70vw;
     overflow: hidden;
     flex-wrap: nowrap;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
 }
 
 div.gameCardContainer div.gameCard {
@@ -546,6 +543,13 @@ button#likeBtn {
     text-align: center;
     width: 2em;
     height: 2em;
+}
+
+p.gameContainerText{
+    color: black;
+    font-weight: bold;
+    font-size: 15pt;
+    padding: 2rem 0;
 }
 
 /**********************************

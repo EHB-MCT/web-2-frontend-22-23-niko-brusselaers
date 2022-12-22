@@ -1,4 +1,5 @@
 const updateUserPreferences = async (newUserPreferences,URL) => {
+    //post user new like of dislike of a game and store it inside database
     await fetch(`${URL}/updateUserGamePreference`, {
         method: "PUT",
         headers: {

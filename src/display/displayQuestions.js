@@ -6,6 +6,7 @@ const displayQuestions = async (questionType, selectedData = null, URL) => {
 
     switch (questionType) {
         case "genre":
+            //set button container display to none and display the option buttons for genre
             document.getElementById("mainPageBtnContainer").style.display = "none"
             mainContent.innerHTML = `
                 <h1>Find By Preferences</h1>
@@ -27,7 +28,7 @@ const displayQuestions = async (questionType, selectedData = null, URL) => {
                 <div class="inputedDataContainer" id="inputedDataContainer"></div>
                 `
 
-
+            // if a question button is pressed, add or remove class selectedBtn to add or remove button border
             const questionContainerGenre = document.querySelector('#questionContainerGenre')
             questionContainerGenre.addEventListener('click', (element) => {
                 if (element.target != element.currentTarget) {
@@ -36,24 +37,27 @@ const displayQuestions = async (questionType, selectedData = null, URL) => {
 
                 }
             })
+            // if user presses the next button, read all buttons innerhtml with class selectedBtn
+            // and add it to variable genres
             let nextBtnGenre = document.getElementById('nextBtnGenre')
             nextBtnGenre.addEventListener('click', () => {
-                console.log('click');
                 let genres = []
                 let selectedBtns = document.querySelectorAll('button.selectedBtn')
                 selectedBtns.forEach(element => {
                     genres.push(element.innerHTML)
                 })
+                // insert genres into selectedData variable and start diplayFunctions to start the next series of questions
                 selectedData = {
                     genres: genres,
                     platform: null,
                     tag: null
                 }
+
                 displayQuestions("platform", selectedData, URL)
             })
             break;
         case "platform":
-            console.log(selectedData);
+            // display the option buttons for platform
             mainContent.innerHTML = `
                 <h1>Find By Preferences</h1>
                 <p>
@@ -71,7 +75,7 @@ const displayQuestions = async (questionType, selectedData = null, URL) => {
                 </div>
                 <button class="nextBtn" id="nextBtnPlatform">Next</button>
                 `
-
+            // if a question button is pressed, add or remove class selectedBtn to add or remove button border
             const questionContainerPlatform = document.querySelector('#questionContainerPlatform')
             questionContainerPlatform.addEventListener('click', (element) => {
                 if (element.target != element.currentTarget) {
@@ -80,19 +84,22 @@ const displayQuestions = async (questionType, selectedData = null, URL) => {
 
                 }
             })
+            // if user presses the next button, read all buttons id's with class selectedBtn
+            // and add it to variable platform
             let nextBtnPlatform = document.getElementById('nextBtnPlatform')
             nextBtnPlatform.addEventListener('click', () => {
-                console.log('click');
                 let platform = []
                 let selectedBtns = document.querySelectorAll('button.selectedBtn')
                 selectedBtns.forEach(element => {
                     platform.push(element.id)
                 })
+                // insert platform into selectedData variable and start diplayFunctions to start the next series of questions
                 selectedData.platform = platform
                 displayQuestions("tag", selectedData, URL)
             })
             break;
         case "tag":
+            // display the option buttons for tags
             mainContent.innerHTML = `
                 <h1>Find By Preferences</h1>
                 <p>
@@ -110,7 +117,7 @@ const displayQuestions = async (questionType, selectedData = null, URL) => {
                 <div class="inputedDataContainer" id="inputedDataContainer"></div>
                 `
 
-
+            // if a question button is pressed, add or remove class selectedBtn to add or remove button border
             const questionContainerTag = document.querySelector('#questionContainerTag')
             questionContainerTag.addEventListener('click', (element) => {
                 if (element.target != element.currentTarget) {
@@ -119,24 +126,28 @@ const displayQuestions = async (questionType, selectedData = null, URL) => {
 
                 }
             })
+            // if user presses the next button, read all buttons innerhtml with class selectedBtn
+            // and add it to variable tag
             let nextBtnTag = document.getElementById('nextBtnTag')
             nextBtnTag.addEventListener('click', () => {
-                console.log('click');
                 let tag = []
                 let selectedBtns = document.querySelectorAll('button.selectedBtn')
                 selectedBtns.forEach(element => {
                     tag.push(element.innerHTML)
                 })
+                // insert tag into selectedData variable and start diplayFunctions to start fetch call and display random selected game
                 selectedData.tag = tag
-                console.log(selectedData);
                 displayQuestions("fetch", selectedData, URL)
 
             })
             break;
         case "fetch":
+            //fetch a random game based on prefrences
             let randomGame = await getGameByPreferences(URL, selectedData)
+            //set button container display to flex to it visible again
             document.getElementById("mainPageBtnContainer").style.display = "flex"
-            displayGame(randomGame,URL)
+            //start function displayGame to display the randomly selected game
+            displayGame(randomGame, URL)
             break;
 
 
