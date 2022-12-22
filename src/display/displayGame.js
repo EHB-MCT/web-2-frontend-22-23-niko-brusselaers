@@ -1,4 +1,7 @@
-const displayGame = (gameData) => {
+import updateUserPreferences from "../fetch/updateUserPreferences"
+
+
+const displayGame = (gameData, URL) => {
     // insert randomly selected game inside html element
     let innerHTML = `
             <h1> Random Game </h1> 
@@ -19,25 +22,17 @@ const displayGame = (gameData) => {
     gameCard.addEventListener('click', async (element) => {
         //if clicked element is not gameCard, retrieve userId and gameId
         if (element.target != element.currentTarget) {
-            let updateUserPreferences = {
+            let newUserPreferences = {
                 userId: sessionStorage.getItem('id') || localStorage.getItem('id'),
                 gameId: element.currentTarget.querySelector('h4').innerHTML,
                 isLiked: null
             }
             // if likedBtn has been clicked set isLiked true else if dislikeBtn has been clicked set it to false
-            if (element.target.id == "likeBtn") updateUserPreferences.isLiked = true
-            else if (element.target.id == "dislikeBtn") updateUserPreferences.isLiked = false
+            if (element.target.id == "likeBtn") newUserPreferences.isLiked = true
+            else if (element.target.id == "dislikeBtn") newUserPreferences.isLiked = false
             // do a fetch call to update User Game Preference with the like/dislike of the displayed game
-            let statusCode
-            await fetch(`${URL}/updateUserGamePreference`, {
-                method: "PUT",
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    updateUserPreferences
-                })
-            })
+            updateUserPreferences(newUserPreferences, URL)
+
 
 
         }

@@ -1,6 +1,7 @@
 import displayGame from "./display/displayGame"
 import displayMainpageButtons from "./display/displayMainpageButtons"
 import displayNav from "./display/displayNav"
+import displayQuestions from "./display/displayQuestions"
 import getGameFromFavorites from "./fetch/getGameFromFavorites"
 import getRandomGame from "./fetch/getRandomGame"
 const isLoggedIn = sessionStorage.getItem('isLoggedIn')
@@ -19,11 +20,16 @@ const findRandomBtn = document.getElementById("findRandomBtn")
 findRandomBtn.addEventListener("click", async () => {
     let randomGame = await getRandomGame(URL)
     //when data about game has been received update main page to display the randomly selected game
-    displayGame(randomGame)
+    displayGame(randomGame,URL)
 
 })
 
+//if the user clicks on the find on preference buttons, function will start wil displaying questions
 const findOnPreferenceBtn = document.getElementById("findOnPreferenceBtn")
+findOnPreferenceBtn.addEventListener('click', () => {
+    let randomGame = displayQuestions("genre", undefined,URL = URL)
+    //when data about game has been received update main page to display the randomly selected game
+})
 
 
 // if user is logged in, create an eventlistener for findFromFavoritesBtn
@@ -33,7 +39,7 @@ if (isLoggedIn == "true") {
     findFromFavoritesBtn.addEventListener('click', async () => {
         let randomGame = await getGameFromFavorites(URL)
         //when data about game has been received update main page to display the randomly selected game
-        displayGame(randomGame)
+        displayGame(randomGame, URL)
     })
 
 }

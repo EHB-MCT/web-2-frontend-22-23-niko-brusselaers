@@ -1,0 +1,13 @@
+const updateUserPreferences = async (newUserPreferences,URL) => {
+    await fetch(`${URL}/updateUserGamePreference`, {
+        method: "PUT",
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            newUserPreferences
+        })
+    })
+}
+
+export default updateUserPreferences
