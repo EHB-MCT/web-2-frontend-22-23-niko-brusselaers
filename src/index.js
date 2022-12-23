@@ -5,8 +5,7 @@ import displayQuestions from "./display/displayQuestions"
 import getGameFromFavorites from "./fetch/getGameFromFavorites"
 import getRandomGame from "./fetch/getRandomGame"
 const isLoggedIn = sessionStorage.getItem('isLoggedIn')
-// var URL = 'https://gamepickr-backend.onrender.com'
-var URL = "http://localhost:3000"
+const URL = 'https://gamepickr-backend.onrender.com'
 // display a certain version of nav, depending if the user is logged in or not
 displayNav(isLoggedIn)
 document.getElementById('index').classList.add("activeLink")

@@ -11,3 +11,8 @@
 - adding event listener to multipule elements: https://www.kirupa.com/html5/handling_events_for_many_elements.htm
 - repeat a charachter: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat
 - how to create an overlay: https://www.w3schools.com/howto/howto_css_overlay.asp
+- WEB II backend niko brusselaers: https: //github.com/EHB-MCT/web2-backend-niko-brusselaers
+- MongoDb documentation: https: //www.mongodb.com/docs/
+- MongoDb remove object from array: https: //stackoverflow.com/questions/15641492/mongodb-remove-object-from-array
+- RAWG api documentation: https: //api.rawg.io/docs/
+- switch statement javscript: https: //www.w3schools.com/js/js_switch.asp

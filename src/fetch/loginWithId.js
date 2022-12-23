@@ -1,4 +1,4 @@
-var URL = "https://gamepickr-backend.onrender.com"
+const URL = "https://gamepickr-backend.onrender.com"
 
 async function loginWithId(URL) {
     //retrieve user credential either from sessionStorage or localStorage, if both ar empty return null
@@ -22,6 +22,7 @@ async function loginWithId(URL) {
             )
             .then(response => response.json())
             .then(async data => {
+                console.log(data);
                 // if credentials are valid, create a new variable in sessionStorage and set it to true
                 if (data.isValid) {
                     sessionStorage.setItem("isLoggedIn", true)

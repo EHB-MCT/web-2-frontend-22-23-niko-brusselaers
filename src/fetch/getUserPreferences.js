@@ -25,7 +25,7 @@ const getUserPreferences = async (URL) => {
                 document.getElementById('dislikedGamesContainer').innerHTML = `<p class='gameContainerText'>no disliked games found</p>`
 
             } else {
-                displayUserGamePreferences(data.games)
+                displayUserGamePreferences(data.games,URL)
             }
         })
 }

@@ -1,6 +1,6 @@
 const signInForm = document.getElementById('signInForm')
 const isLoggedIn = sessionStorage.getItem('isLoggedIn')
-const url = 'https://gamepickr-backend.onrender.com'
+const URL = 'https://gamepickr-backend.onrender.com'
 
 
 // if user has already logged in, redirect to main
@@ -17,7 +17,7 @@ if (isLoggedIn == "true") {
         try {
             let statusCode
             // perform a fetch call to check if user credentials are valid
-            fetch(`${url}/login`, {
+            fetch(`${URL}/login`, {
                     method: "POST",
                     headers: {
                         'Content-Type': 'application/json', 
