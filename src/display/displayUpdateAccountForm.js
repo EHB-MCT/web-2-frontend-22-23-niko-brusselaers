@@ -3,9 +3,10 @@ import updateAccount from "../fetch/updateAccount"
 
 
 const displayUpdateAccountForm = (URL) => {
+    //create an event listener for my profile
     let myProfile = document.querySelector('#myProfile')
     myProfile.addEventListener("click", (element) => {
-
+        // if the user clicks on the edit button, display an overlay with updateCredentials form
         if (element.target != element.currentTarget) {
             let elementInnerHTML = element.target.innerHTML
             if (elementInnerHTML == "edit") {
@@ -19,15 +20,15 @@ const displayUpdateAccountForm = (URL) => {
                             <form id="editCredentialsForm">
                                 <div class="input">
                                     <label for="currentPassword">Current Password:</label>
-                                    <input type="password" id="currentPassword" placeholder="current password" >
+                                    <input type="password" id="currentPassword" placeholder="current password" required>
                                 </div>
                                 <div class="input">
                                     <label for="username">New ${element.target.classList[0]}:</label>
-                                    <input type="text" id="newCredential" placeholder="${element.target.classList[0]}" >
+                                    <input type="text" id="newCredential" placeholder="${element.target.classList[0]}" required>
                                 </div>
                                 <div class='editCredentialsBtns'>
-                                    <button id="cancelBtn">cancel</button>
                                     <button id="submitBtn" type="submit">submit</button>
+                                    <button id="cancelBtn">cancel</button>
                                 </div>
                             </form>
                         </div>
@@ -35,9 +36,10 @@ const displayUpdateAccountForm = (URL) => {
                 </div>
                 `
                 body.insertAdjacentHTML('beforebegin', innerHTML)
-
+                // if user clicks on cancel button, remove overlay and form
                 document.getElementById('cancelBtn').addEventListener('click', () => document.getElementById("overlay").remove())
                 let editCredentialsForm = document.getElementById('editCredentialsForm')
+                // if user clicks on submit get data from form and perform a fetch call to update user credentials
                 editCredentialsForm.addEventListener('submit', async (event) => {
                     event.preventDefault()
 

@@ -14,7 +14,8 @@
 
 :root {
     --tensentype: "tensentype-zhihei";
-    --verdana: "Verdana, Geneva, Tahoma, sans-serif"
+    --verdana: "Verdana, Geneva, Tahoma, sans-serif";
+    --lightBleu: #32C6F4
 }
 
 /********************
@@ -75,11 +76,31 @@
 
 
 body {
-    background-color: #32C6F4;
+    background: url('./images/background.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     font-family: var(--tensentype),
         sans-serif;
     overflow-x: hidden;
 
+}
+
+body.loginBody {
+    background: url('./images/login_background.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body.profileBody {
+    background: var(--lightBleu);
+}
+
+body.loginBody p {
+    color: gray;
 }
 
 h1 {
@@ -340,9 +361,6 @@ div.inputField:last-of-type {
     width: 100vw;
 }
 
-.myDislikes {
-    background-color: gray;
-}
 
 section:target#myFavorites {
     display: flex;
@@ -461,8 +479,9 @@ div.myDislikes {
     display: flex;
     width: 80vw;
     padding: 5vh 10vw 5vh;
-    flex-direction: column;
+    flex-direction: row;
     overflow: auto;
+    align-items: center;
 
 }
 
@@ -484,10 +503,17 @@ div.gameCardContainer {
     display: flex;
     overflow: auto;
     flex-wrap: nowrap;
+    width: 70%;
     flex-direction: row;
     align-content: center;
-    justify-content: center;
+    scroll-behavior: smooth;
+    margin: 0 5vw;
 }
+
+div.gameCardContainer::-webkit-scrollbar {
+    display: none;
+}
+
 
 div.gameCardContainer div.gameCard {
     width: 20rem;

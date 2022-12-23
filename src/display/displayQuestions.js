@@ -1,7 +1,7 @@
 import displayGame from "./displayGame"
 import getGameByPreferences from "../fetch/getGameByPreferences"
 
-const displayQuestions = async (questionType, selectedData = null, URL) => {
+const displayQuestions = async (questionType, URL, selectedData = null) => {
     const mainContent = document.getElementById('mainContent')
 
     switch (questionType) {
@@ -53,7 +53,7 @@ const displayQuestions = async (questionType, selectedData = null, URL) => {
                     tag: null
                 }
 
-                displayQuestions("platform", selectedData, URL)
+                displayQuestions("platform", URL, selectedData)
             })
             break;
         case "platform":
@@ -95,7 +95,8 @@ const displayQuestions = async (questionType, selectedData = null, URL) => {
                 })
                 // insert platform into selectedData variable and start diplayFunctions to start the next series of questions
                 selectedData.platform = platform
-                displayQuestions("tag", selectedData, URL)
+                displayQuestions("tag", URL, selectedData)
+
             })
             break;
         case "tag":
@@ -137,7 +138,8 @@ const displayQuestions = async (questionType, selectedData = null, URL) => {
                 })
                 // insert tag into selectedData variable and start diplayFunctions to start fetch call and display random selected game
                 selectedData.tag = tag
-                displayQuestions("fetch", selectedData, URL)
+                displayQuestions("fetch", URL, selectedData)
+
 
             })
             break;

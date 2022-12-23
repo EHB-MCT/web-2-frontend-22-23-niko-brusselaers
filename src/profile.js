@@ -15,8 +15,12 @@ if (isLoggedIn == "true") {
     getUserData(URL).userData
     // get all user game preferences from rest api
     getUserPreferences(URL)
-
+    // create a eventlistner to add a form when user presses on any of the edit buttons on profile page
     displayUpdateAccountForm(URL)
+
+    
+
+    
 
 
 } else {

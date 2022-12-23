@@ -16,3 +16,4 @@
 - MongoDb remove object from array: https: //stackoverflow.com/questions/15641492/mongodb-remove-object-from-array
 - RAWG api documentation: https: //api.rawg.io/docs/
 - switch statement javscript: https: //www.w3schools.com/js/js_switch.asp
+- scroll left-right with button: https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollLeft

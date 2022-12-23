@@ -26,7 +26,7 @@ findRandomBtn.addEventListener("click", async () => {
 //if the user clicks on the find on preference buttons, function will start wil displaying questions
 const findOnPreferenceBtn = document.getElementById("findOnPreferenceBtn")
 findOnPreferenceBtn.addEventListener('click', () => {
-    let randomGame = displayQuestions("genre", undefined,URL = URL)
+    let randomGame = displayQuestions("genre", URL)
     //when data about game has been received update main page to display the randomly selected game
 })
 

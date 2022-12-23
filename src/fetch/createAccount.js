@@ -1,6 +1,6 @@
 const createAccountForm = document.getElementById('createAccountForm')
 const isLoggedIn = sessionStorage.getItem('isLoggedIn')
-const url = 'https://gamepickr-backend.onrender.com'
+const URL = 'https://gamepickr-backend.onrender.com'
 
 // if user has already logged in, redirect to main page
 if (isLoggedIn == "true") {
@@ -8,6 +8,7 @@ if (isLoggedIn == "true") {
 } else {
     createAccountForm.addEventListener("submit", (event) => {
         event.preventDefault()
+        console.log('click');
         //get all input data from form
         const newUser = {
             username: document.getElementById('username').value,
@@ -21,7 +22,7 @@ if (isLoggedIn == "true") {
         if (newUser.password == repeatPassword) {
             try {
                 let statusCode
-                fetch(`http://localhost:3000/createAccount`, {
+                fetch(`${URL}/createAccount`, {
                         method: "POST",
                         headers: {
                             'Content-Type': 'application/json',
