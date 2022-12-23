@@ -366,7 +366,6 @@ section:target#myFavorites {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    align-items: center;
 }
 
 div.editCredentialsBtns {
@@ -528,6 +527,8 @@ div.myDislikes div.gameCard div {
     justify-content: center;
 }
 
+
+
 /******************************
 ******** displayGame *********
 ******************************/
@@ -600,8 +601,10 @@ button#likeBtn {
 p.gameContainerText {
     color: black;
     font-weight: bold;
-    font-size: 15pt;
     padding: 2rem 0;
+    width: 100vw;
+    font-size: 20pt;
+    text-align: center;
 }
 
 /**********************************

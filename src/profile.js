@@ -6,7 +6,6 @@ import displayUpdateAccountForm from "./display/displayUpdateAccountForm"
 
 const isLoggedIn = sessionStorage.getItem('isLoggedIn')
 const URL = 'https://gamepickr-backend.onrender.com'
-console.log(isLoggedIn);
 displayNav(isLoggedIn)
 document.getElementById('profile').classList.add("activeLink")
 

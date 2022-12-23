@@ -40,7 +40,7 @@ const displayUserGamePreferences = (games, URL) => {
     document.getElementById('favoriteGamesContainer').innerHTML = likedGamesInnerHTML
     document.getElementById('dislikedGamesContainer').innerHTML = dislikedGamesInnerHTML
     favoritesDiv.insertAdjacentHTML("beforeend", '<button id="scrollRightLiked">&#x3e;</button>')
-    dislikesDiv.insertAdjacentHTML('beforeend', '<button id="scrollRightLiked">&#x3e;</button>')
+    dislikesDiv.insertAdjacentHTML('beforeend', '<button id="scrollRightDisliked">&#x3e;</button>')
 
 
     // if user clicks on scroll left or right button, itmes inside gamesContainer will scroll to left or right

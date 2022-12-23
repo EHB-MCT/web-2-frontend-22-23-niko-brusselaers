@@ -5,7 +5,7 @@ const displayNav = (isLoggedIn) => {
     //if user is logged in, show; logo, mainpage link, profile link, and logout button
     if (isLoggedIn == "true") {
         innerHTML = `
-            <a href="./index.html"> <img class="navLogo" src="./images/logo.png" alt="logo image Game Select"> </a>
+            <a href="./index.html"> <img class="navLogo" src="./images/logo_name.png" alt="logo image Game Select"> </a>
         <div>
             <a href = "./index.html" class="navLinks" id='index'> Main </a>
             <a href = "./profile.html#myProfile" class = "navLinks" id='profile'> Profile </a> 
@@ -27,12 +27,12 @@ const displayNav = (isLoggedIn) => {
     } else {
         // if user is not logged in, show logo, mainpage link and sign-in link
         innerHTML = `
-            <a href="./index.html"> <img class="navLogo" src="./images/logo.png" alt="logo image Game Select" > </a>
+            <a href="./index.html"> <img class="navLogo" src="./images/logo_name.png" alt="logo image Game Select"> </a>
 
-        <div>
-            <a href = "./index.html" class="navLinks" id='index' >  Main </a>
-            <a href = "./login.html" class="navLinks" id='profile'> Sign In </a> 
-        </div>
+            <div>
+                <a href="./index.html" class="navLinks" id='index'> Main </a>
+                <a href="./login.html" class="navLinks" id='profile'> Sign In </a>
+            </div>
         `
         nav.innerHTML = innerHTML
     }
